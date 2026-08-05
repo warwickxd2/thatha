@@ -1,4 +1,4 @@
-html = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -225,33 +225,26 @@ html = '''<!DOCTYPE html>
             document.getElementById('total').innerText = total.toFixed(2);
         }
 
-        function enviarWhatsApp() { // 1. Corrigi pra W maiusculo
+        function enviarWhatsApp() { 
             if (carrinho.length === 0) {
                 alert('Adicione itens ao carrinho!');
                 return;
             }
 
-            // 2. Crase aqui `
             let mensagem = `Olá THATHA! Quero fazer o pedido:\n\n`;
 
-            // 3. Crase aqui `
             carrinho.forEach(item => {
                 mensagem += `-${item.nome} - R$ ${item.preco.toFixed(2)}\n`;
             });
 
-            // 4. Crase aqui `
             mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
 
-            // 5. Tira as aspas e ;
             let mensagemCodificada = encodeURIComponent(mensagem);
 
-            // 6. Crase aqui `
             let link = `https://wa.me/5516993689298?text=${mensagemCodificada}`;
 
-            // 7. Abre o WhatsApp
             window.open(link, '_blank');
         }
     </script>
 </body>
-</html>'''
-print(html)
+</html>
