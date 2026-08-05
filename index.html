@@ -42,6 +42,33 @@
             margin: 20px auto;
             max-width: 400px;
         }
+        
+        /* Novos estilos para a lista do carrinho e botão de remover */
+        #lista-carrinho {
+            list-style-type: none;
+            padding: 0;
+        }
+        #lista-carrinho li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .btn-remover {
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
         #btn-pedido {
             background: #25D366;
             color: white;
@@ -69,7 +96,7 @@
                 <h3>Morango</h3>
                 <p>R$ 6,50</p>
             </div>
-            <button onclick="adicionar(1, 'Morango', 6.50)">+</button>
+            <button onclick="adicionar('Morango', 6.50)">+</button>
         </div>
 
         <div class="produto">
@@ -77,7 +104,7 @@
                 <h3>Brigadeiro</h3>
                 <p>R$ 6,50</p>
             </div>
-            <button onclick="adicionar(1, 'Brigadeiro', 6.50)">+</button>
+            <button onclick="adicionar('Brigadeiro', 6.50)">+</button>
         </div>
 
         <div class="produto">
@@ -85,7 +112,7 @@
                 <h3>Ninho</h3>
                 <p>R$ 6,50</p>
             </div>
-            <button onclick="adicionar(1, 'Ninho', 6.50)">+</button>
+            <button onclick="adicionar('Ninho', 6.50)">+</button>
         </div>
 
         <div class="produto">
@@ -93,7 +120,7 @@
                 <h3>Prestigio</h3>
                 <p>R$ 6,50</p>
             </div>
-            <button onclick="adicionar(1, 'Prestigio', 6.50)">+</button>
+            <button onclick="adicionar('Prestigio', 6.50)">+</button>
         </div>
 
         <div class="produto">
@@ -101,7 +128,7 @@
                 <h3>Maracuja</h3>
                 <p>R$ 6,50</p>
             </div>
-            <button onclick="adicionar(1, 'Maracuja', 6.50)">+</button>
+            <button onclick="adicionar('Maracuja', 6.50)">+</button>
         </div>
 
         <div class="produto">
@@ -109,7 +136,7 @@
                 <h3>Uva</h3>
                 <p>R$ 6,50</p>
             </div>
-            <button onclick="adicionar(1, 'Uva', 6.50)">+</button>
+            <button onclick="adicionar('Uva', 6.50)">+</button>
         </div>
 
         <div class="produto">
@@ -117,7 +144,7 @@
                 <h3>Limão</h3>
                 <p>R$ 6,50</p>
             </div>
-            <button onclick="adicionar(1, 'Limão', 6.50)">+</button>
+            <button onclick="adicionar('Limão', 6.50)">+</button>
         </div>
 
         <h3>Cones trufados</h3>
@@ -127,7 +154,7 @@
                 <h3>Ninho</h3>
                 <p>R$ 10,00</p>
             </div>
-            <button onclick="adicionar(2, 'Ninho', 10.00)">+</button>
+            <button onclick="adicionar('Ninho', 10.00)">+</button>
         </div>
 
         <div class="produto">
@@ -135,7 +162,7 @@
                 <h3>Prestigio</h3>
                 <p>R$ 10,00</p>
             </div>
-            <button onclick="adicionar(2, 'Prestigio', 10.00)">+</button>
+            <button onclick="adicionar('Prestigio', 10.00)">+</button>
         </div>
 
         <div class="produto">
@@ -143,7 +170,7 @@
                 <h3>Brigadeiro</h3>
                 <p>R$ 10,00</p>
             </div>
-            <button onclick="adicionar(2, 'Brigadeiro', 10.00)">+</button>
+            <button onclick="adicionar('Brigadeiro', 10.00)">+</button>
         </div>
 
         <div class="produto">
@@ -151,7 +178,7 @@
                 <h3>Ninho com nutela</h3>
                 <p>R$ 12,00</p>
             </div>
-            <button onclick="adicionar(2, 'Ninho com nutela', 12.00)">+</button>
+            <button onclick="adicionar('Ninho com nutela', 12.00)">+</button>
         </div>
 
         <div class="produto">
@@ -159,7 +186,7 @@
                 <h3>Prestigio com nutela</h3>
                 <p>R$ 12,00</p>
             </div>
-            <button onclick="adicionar(2, 'Prestigio com nutela', 12.00)">+</button>
+            <button onclick="adicionar('Prestigio com nutela', 12.00)">+</button>
         </div>
 
         <h4>Bombom no pote</h4>
@@ -169,7 +196,7 @@
                 <h3>Morango</h3>
                 <p>R$ 10,00</p>
             </div>
-            <button onclick="adicionar(3, 'Morango', 10.00)">+</button>
+            <button onclick="adicionar('Morango', 10.00)">+</button>
         </div>
 
         <div class="produto">
@@ -177,7 +204,7 @@
                 <h3>Uva</h3>
                 <p>R$ 10,00</p>
             </div>
-            <button onclick="adicionar(3, 'Uva', 10.00)">+</button>
+            <button onclick="adicionar('Uva', 10.00)">+</button>
         </div>
 
         <h5>Bolo no Pote</h5>
@@ -187,7 +214,7 @@
                 <h3>Ninho</h3>
                 <p>R$ 10,00</p>
             </div>
-            <button onclick="adicionar(4, 'Ninho', 10.00)">+</button>
+            <button onclick="adicionar('Ninho', 10.00)">+</button>
         </div>
 
         <div class="produto">
@@ -195,7 +222,7 @@
                 <h3>Prestigio</h3>
                 <p>R$ 10,00</p>
             </div>
-            <button onclick="adicionar(4, 'Prestigio', 10.00)">+</button>
+            <button onclick="adicionar('Prestigio', 10.00)">+</button>
         </div>
     </div>
 
@@ -208,20 +235,35 @@
 
     <script>
         let carrinho = [];
-        let total = 0;
 
-        function adicionar(id, nome, preco) {
+        function adicionar(nome, preco) {
             carrinho.push({nome, preco});
-            total += preco;
+            atualizarCarrinho();
+        }
+
+        // Função nova para remover produto pelo número da posição (index) dele na lista
+        function removerItem(index) {
+            carrinho.splice(index, 1);
             atualizarCarrinho();
         }
 
         function atualizarCarrinho() {
             let lista = document.getElementById('lista-carrinho');
             lista.innerHTML = '';
-            carrinho.forEach(item => {
-                lista.innerHTML += `<li>${item.nome} - R$ ${item.preco.toFixed(2)}</li>`;
+            
+            let total = 0; // Recalcula o total do zero sempre que atualiza (evita erros de matemática)
+
+            carrinho.forEach((item, index) => {
+                total += item.preco;
+                // Adicionado o botão "X" que chama a função removerItem
+                lista.innerHTML += `
+                    <li>
+                        <span>${item.nome} - R$ ${item.preco.toFixed(2)}</span>
+                        <button class="btn-remover" onclick="removerItem(${index})">X</button>
+                    </li>
+                `;
             });
+
             document.getElementById('total').innerText = total.toFixed(2);
         }
 
@@ -232,15 +274,16 @@
             }
 
             let mensagem = `Olá THATHA! Quero fazer o pedido:\n\n`;
+            let totalFinal = 0;
 
             carrinho.forEach(item => {
                 mensagem += `-${item.nome} - R$ ${item.preco.toFixed(2)}\n`;
+                totalFinal += item.preco;
             });
 
-            mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
+            mensagem += `\nTotal: R$ ${totalFinal.toFixed(2)}`;
 
             let mensagemCodificada = encodeURIComponent(mensagem);
-
             let link = `https://wa.me/5516993689298?text=${mensagemCodificada}`;
 
             window.open(link, '_blank');
