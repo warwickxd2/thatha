@@ -1,0 +1,257 @@
+html = '''<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - THATHA GOURMET</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #a21071;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            color: #eeff00;
+            margin-bottom: 20px;
+        }
+        .produto {
+            background: rgb(246, 242, 242);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px auto;
+            max-width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(137, 137, 56, 0.515);
+        }
+        .produto button {
+            background: #1be28c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #carrinho {
+            background: rgb(243, 238, 238);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        #btn-pedido {
+            background: #25D366;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>THATHA GOURMET 🫰</h1>
+        <p>Monte seu pedido</p>
+    </header>
+
+    <h2>Trufas</h2>
+
+    <div id="produtos">
+        <div class="produto">
+            <div>
+                <h3>Morango</h3>
+                <p>R$ 6,50</p>
+            </div>
+            <button onclick="adicionar(1, 'Morango', 6.50)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Brigadeiro</h3>
+                <p>R$ 6,50</p>
+            </div>
+            <button onclick="adicionar(1, 'Brigadeiro', 6.50)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Ninho</h3>
+                <p>R$ 6,50</p>
+            </div>
+            <button onclick="adicionar(1, 'Ninho', 6.50)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Prestigio</h3>
+                <p>R$ 6,50</p>
+            </div>
+            <button onclick="adicionar(1, 'Prestigio', 6.50)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Maracuja</h3>
+                <p>R$ 6,50</p>
+            </div>
+            <button onclick="adicionar(1, 'Maracuja', 6.50)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Uva</h3>
+                <p>R$ 6,50</p>
+            </div>
+            <button onclick="adicionar(1, 'Uva', 6.50)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Limão</h3>
+                <p>R$ 6,50</p>
+            </div>
+            <button onclick="adicionar(1, 'Limão', 6.50)">+</button>
+        </div>
+
+        <h3>Cones trufados</h3>
+
+        <div class="produto">
+            <div>
+                <h3>Ninho</h3>
+                <p>R$ 10,00</p>
+            </div>
+            <button onclick="adicionar(2, 'Ninho', 10.00)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Prestigio</h3>
+                <p>R$ 10,00</p>
+            </div>
+            <button onclick="adicionar(2, 'Prestigio', 10.00)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Brigadeiro</h3>
+                <p>R$ 10,00</p>
+            </div>
+            <button onclick="adicionar(2, 'Brigadeiro', 10.00)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Ninho com nutela</h3>
+                <p>R$ 12,00</p>
+            </div>
+            <button onclick="adicionar(2, 'Ninho com nutela', 12.00)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Prestigio com nutela</h3>
+                <p>R$ 12,00</p>
+            </div>
+            <button onclick="adicionar(2, 'Prestigio com nutela', 12.00)">+</button>
+        </div>
+
+        <h4>Bombom no pote</h4>
+
+        <div class="produto">
+            <div>
+                <h3>Morango</h3>
+                <p>R$ 10,00</p>
+            </div>
+            <button onclick="adicionar(3, 'Morango', 10.00)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Uva</h3>
+                <p>R$ 10,00</p>
+            </div>
+            <button onclick="adicionar(3, 'Uva', 10.00)">+</button>
+        </div>
+
+        <h5>Bolo no Pote</h5>
+
+        <div class="produto">
+            <div>
+                <h3>Ninho</h3>
+                <p>R$ 10,00</p>
+            </div>
+            <button onclick="adicionar(4, 'Ninho', 10.00)">+</button>
+        </div>
+
+        <div class="produto">
+            <div>
+                <h3>Prestigio</h3>
+                <p>R$ 10,00</p>
+            </div>
+            <button onclick="adicionar(4, 'Prestigio', 10.00)">+</button>
+        </div>
+    </div>
+
+    <div id="carrinho">
+        <h2>🛒 Seu Pedido</h2>
+        <ul id="lista-carrinho"></ul>
+        <h3>Total: R$ <span id="total">0.00</span></h3>
+        <button id="btn-pedido" onclick="enviarWhatsApp()">Enviar Pedido no WhatsApp</button>
+    </div>
+
+    <script>
+        let carrinho = [];
+        let total = 0;
+
+        function adicionar(id, nome, preco) {
+            carrinho.push({nome, preco});
+            total += preco;
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            let lista = document.getElementById('lista-carrinho');
+            lista.innerHTML = '';
+            carrinho.forEach(item => {
+                lista.innerHTML += `<li>${item.nome} - R$ ${item.preco.toFixed(2)}</li>`;
+            });
+            document.getElementById('total').innerText = total.toFixed(2);
+        }
+
+        function enviarWhatsApp() { // 1. Corrigi pra W maiusculo
+            if (carrinho.length === 0) {
+                alert('Adicione itens ao carrinho!');
+                return;
+            }
+
+            // 2. Crase aqui `
+            let mensagem = `Olá THATHA! Quero fazer o pedido:\n\n`;
+
+            // 3. Crase aqui `
+            carrinho.forEach(item => {
+                mensagem += `-${item.nome} - R$ ${item.preco.toFixed(2)}\n`;
+            });
+
+            // 4. Crase aqui `
+            mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
+
+            // 5. Tira as aspas e ;
+            let mensagemCodificada = encodeURIComponent(mensagem);
+
+            // 6. Crase aqui `
+            let link = `https://wa.me/5516993689298?text=${mensagemCodificada}`;
+
+            // 7. Abre o WhatsApp
+            window.open(link, '_blank');
+        }
+    </script>
+</body>
+</html>'''
+print(html)
